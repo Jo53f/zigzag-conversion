@@ -13,10 +13,7 @@ class Solution:
 			if 0 == column or column == numRows - 1:
 				diagonal = not diagonal
 
-			if diagonal:
-				column -= 1
-			else:
-				column += 1
+			column -= 1 if diagonal else -1
 
 		return "".join(ans_array)
 
